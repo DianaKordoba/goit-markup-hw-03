@@ -88,10 +88,26 @@ ul {
 .headerlist {
     list-style-type: none;
     display: flex;
+    gap: 40px;
     margin-left: 76px;
+}
+
+.headerlist-address {
+    list-style-type: none;
+    display: flex;
     gap: 40px;
 }
 
+.current {
+color: var(--color-logo);
+text-decoration: none;
+list-style-type: none;
+line-height: 1.5;
+font-size: 16px;
+letter-spacing: 0.02em;
+padding: 28px 0;
+display: block;
+}
 
 .header-link {
     text-decoration: none;
@@ -102,17 +118,7 @@ ul {
     letter-spacing: 0.02em;
     padding: 28px 0;
     display: block;
-}
-
-.current {
-    color: var(--color-logo);
-    text-decoration: none;
-    list-style-type: none;
-    line-height: 1.5;
-    font-size: 16px;
-    letter-spacing: 0.02em;
-    padding: 28px 0;
-    display: block;
+    font-weight: 500;
 }
 
 .header-link:hover,
@@ -125,7 +131,7 @@ ul {
     font-style: normal;
     text-decoration: none;
     color: var(--color-text);
-    padding: 24px 24px;
+    padding: 24px 0;
 }
 
 .addresslink:hover,
@@ -135,7 +141,7 @@ ul {
 
 .section-general {
     background-color: var(--color-page-text);
-    padding: 188px 346px;
+    padding: 188px 0;
     text-align: center;
 }
 
@@ -145,7 +151,8 @@ ul {
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
-    margin-bottom: 48px;
+    margin: 0 auto;
+    max-width: 496px;
 }
 
 .section-general-button {
@@ -161,6 +168,7 @@ ul {
     letter-spacing: 0.04em;
     padding: 16px 32px 16px 32px;
     max-height: 510px;
+    margin-top: 48px;
 }
 
 .section-general-button:hover,
@@ -182,12 +190,17 @@ ul {
     gap: 24px;
 }
 
+.item-characteristic {
+    width: calc((1128px - 3 * 24px)/ 4);
+}
+
 .title-characteristic {
     color: var(--color-page-text);
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .subtitle-characteristic {
@@ -241,6 +254,11 @@ ul {
 
 .list-team-iteam {
     background-color: var(--color-page);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .title-team-list {
@@ -250,7 +268,6 @@ ul {
     text-align: center;
     color: var(--color-page-text);
     letter-spacing: 0.02em;
-    margin-top: 32px;
     margin-bottom: 8px;
 }
 
@@ -260,7 +277,10 @@ ul {
     text-align: center;
     color:var(--color-text);
     letter-spacing: 0.02em;
-    margin-bottom: 32px;
+}
+
+.items-team {
+    padding: 32px 0;
 }
 
 .footer-page {
@@ -280,9 +300,6 @@ ul {
 }
 
 .footer-link {
-    padding-top: 100px;
-    padding-right: 1013px;
-    padding-bottom: 16px;
     color:var(--color-page-secondary);
     font-family: Raleway;
     font-weight: 800;
@@ -347,7 +364,7 @@ ul {
 }
 
 .items-app > .list-app {
-    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
 }
